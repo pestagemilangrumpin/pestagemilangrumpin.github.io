@@ -178,6 +178,30 @@ Daftar Sekarang →
 </section>
 
 <!-- ================= INFORMASI ================= -->
+     <!-- ================= PENGUMUMAN ================= -->
+<div id="announcement" 
+class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 px-4 md:px-6 py-4 flex items-start justify-between gap-4">
+
+    <div class="flex items-start gap-3">
+        <div class="text-xl">📢</div>
+        <div>
+            <p class="font-bold">
+                Info Terbaru!
+            </p>
+            <p class="text-sm md:text-base">
+                Terjadi perubahan pada beberapa peraturan lomba. 
+                Silakan unduh kembali Juknis Pelaksanaan terbaru.
+            </p>
+        </div>
+    </div>
+
+    <button onclick="document.getElementById('announcement').style.display='none'"
+            class="text-lg font-bold hover:opacity-60 transition">
+        ✕
+    </button>
+
+</div>
+
 <section id="informasi" class="hidden py-20 px-6 bg-white">
 
 <!-- ================= JUKNIS PELAKSANAAN ================= -->
@@ -522,6 +546,7 @@ observer.observe(el);
 
 </body>
 </html>
+
 
 
 
