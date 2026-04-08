@@ -24,496 +24,148 @@ gold:'#b8860b'
 
 <style>
 body{font-family:'Plus Jakarta Sans',sans-serif}
-
 .card{transition:all .3s ease}
 .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.15)}
-
-/* ===== Fade Up Animation ===== */
-.fade-up{
-opacity:0;
-transform:translateY(40px);
-transition:all .8s ease;
-}
-
-.fade-up.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* Smooth Section Switch */
-section{
-transition:opacity .3s ease;
-}
+section{transition:opacity .3s ease}
 </style>
 
+</head>
 
 <body class="bg-gray-50 text-gray-800">
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR -->
 <nav class="bg-maroon text-white px-6 py-3 flex justify-between items-center shadow-lg sticky top-0 z-50">
-
 <div class="flex items-center gap-4">
-
-<img src="logo-bogor.webp"
-     alt="Logo Kabupaten Bogor"
-     class="h-14 object-contain bg-white p-1 rounded-md shadow-md">
-
-<img src="logo-sayaga.webp"
-     alt="Logo SAYAGA"
-     class="h-14 object-contain bg-white p-1 rounded-md shadow-md">
-
-<div class="leading-tight">
-<h1 class="font-extrabold text-lg tracking-wide">
-PESTA GEMILANG RUMPIN 2026
-</h1>
-<p class="text-xs opacity-80">
-Kecamatan Rumpin – Kabupaten Bogor
-</p>
+<img src="logo-bogor.webp" class="h-14 bg-white p-1 rounded">
+<img src="logo-sayaga.webp" class="h-14 bg-white p-1 rounded">
+<div>
+<h1 class="font-extrabold text-lg">PESTA GEMILANG RUMPIN 2026</h1>
+<p class="text-xs opacity-80">Kec. Rumpin – Kab. Bogor</p>
+</div>
 </div>
 
+<div class="hidden md:flex gap-6">
+<button onclick="showPage('beranda')">Beranda</button>
+<button onclick="showPage('informasi')">Informasi</button>
+<button onclick="showPage('pendaftaran')">Pendaftaran</button>
+<button onclick="showPage('dokumentasi')">Dokumentasi</button>
 </div>
-
-<div class="hidden md:flex gap-6 font-medium">
-<button onclick="showPage('beranda')" class="hover:text-gold transition">Beranda</button>
-<button onclick="showPage('informasi')" class="hover:text-gold transition">Informasi</button>
-<button onclick="showPage('pendaftaran')" class="hover:text-gold transition">Pendaftaran</button>
-<button onclick="showPage('dokumentasi')" class="hover:text-gold transition">Dokumentasi</button>
-</div>
-
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- ================= BERANDA ================= -->
 <section id="beranda">
 
-<!-- ================= HERO / JUDUL ================= -->
+<!-- HERO -->
 <div class="bg-gradient-to-br from-maroon to-[#5c0017] text-white py-24 text-center">
-
-    <h1 class="text-5xl font-extrabold mb-6">
-        PESTA GEMILANG RUMPIN 2026
-    </h1>
-
-    <p class="text-lg opacity-90 mb-4">
-        OSN • O2SN • FLS3N • FTBI • Pentas PAI • ORTRAD
-    </p>
-
-    <p class="text-gold text-2xl font-bold">
-        14 - 15 April 2026
-    </p>
-
+<h1 class="text-5xl font-extrabold mb-6">PESTA GEMILANG RUMPIN 2026</h1>
+<p class="mb-3">OSN • O2SN • FLS3N • FTBI • Pentas PAI • ORTRAD</p>
+<p class="text-gold text-2xl font-bold">14 - 15 April 2026</p>
 </div>
 
-<!-- ================= JADWAL & LOKASI ================= -->
+<!-- JADWAL -->
 <div class="max-w-6xl mx-auto px-6 py-16">
+<h2 class="text-3xl font-bold text-center mb-10 text-maroon">📅 Jadwal & Lokasi</h2>
 
-    <h2 class="text-3xl font-bold text-center mb-10 text-maroon">
-        📅 Jadwal & Lokasi Kegiatan
-    </h2>
+<div class="grid md:grid-cols-2 gap-8 items-center">
+<img src="jadwal.jpg" class="rounded-xl shadow-lg">
 
-    <div class="grid md:grid-cols-2 gap-8 items-center">
-
-        <!-- GAMBAR -->
-        <img src="jadwal.jpg" 
-             class="rounded-xl shadow-lg w-full object-cover">
-
-        <!-- INFO -->
-        <div class="space-y-4 text-lg">
-
-            <p><strong>📅 Tanggal:</strong><br>
-            14 - 15 April 2026</p>
-
-            <p><strong>📍 Lokasi:</strong><br>
-            Kecamatan Rumpin, Kabupaten Bogor</p>
-
-            <p><strong>👥 Peserta:</strong><br>
-            Seluruh Siswa SD Se-Kecamatan Rumpin</p>
-
-        </div>
-
-    </div>
-
+<div class="space-y-4">
+<p><strong>📅 Tanggal:</strong><br>14 - 15 April 2026</p>
+<p><strong>📍 Lokasi:</strong><br>Kecamatan Rumpin</p>
+<p><strong>👥 Peserta:</strong><br>Seluruh SD se-Rumpin</p>
 </div>
-     <!-- ================= UPDATE JUARA ================= -->
+</div>
+</div>
+
+<!-- JUARA FOTO -->
+<div class="bg-gray-100 py-20 px-6">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-3xl font-bold text-center mb-12 text-maroon">🏆 Para Juara</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden text-center card">
+<img src="juaraipa.jpg" class="w-full h-[260px] object-cover">
+<p class="p-4 font-bold text-maroon">Juara OSN IPA</p>
+</div>
+
+<div class="bg-white rounded-xl shadow-lg overflow-hidden text-center card">
+<img src="juaraips.jpg" class="w-full h-[260px] object-cover">
+<p class="p-4 font-bold text-maroon">Juara OSN IPS</p>
+</div>
+
+<div class="bg-white rounded-xl shadow-lg overflow-hidden text-center card">
+<img src="juaramtk.jpg" class="w-full h-[260px] object-cover">
+<p class="p-4 font-bold text-maroon">Juara OSN Matematika</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- UPDATE JUARA -->
 <div class="max-w-6xl mx-auto px-6 py-20">
+<h2 class="text-3xl font-bold text-center mb-12 text-maroon">📊 Update Juara</h2>
 
-    <h2 class="text-3xl font-bold text-center mb-12 text-maroon">
-        📊 Update Juara Per Bidang
-    </h2>
+<div class="bg-white rounded-2xl shadow-lg p-8">
 
-    <!-- OSN -->
-    <div class="bg-white rounded-2xl shadow-lg p-8 mb-10">
+<h3 class="text-2xl font-bold text-maroon mb-6">🔬 OSN</h3>
 
-        <h3 class="text-2xl font-extrabold text-maroon mb-6">
-            🔬 OSN
-        </h3>
+<h4 class="font-bold mb-2">Olimpiade Matematika</h4>
+<ul class="mb-6">
+<li>🥇 Azzam Maulana – SDN Rumpin 03</li>
+<li>🥈 Fahtimatusidqia – SDN Kertajaya 03</li>
+<li>🥉 Aqila Awalia Wardana – SDN Gobang 03</li>
+</ul>
 
-        <div class="space-y-8">
-
-            <!-- MATEMATIKA -->
-            <div>
-                <h4 class="font-bold text-lg mb-3">
-                    Olimpiade Matematika
-                </h4>
-
-                <ul class="space-y-2 text-gray-700">
-                    <li><strong>Juara 1:</strong> AZZAM MAULANA – SDN Rumpin 03</li>
-                    <li><strong>Juara 2:</strong> FAHTIMATUSIDQIA – SDN Kertajaya 03</li>
-                    <li><strong>Juara 3:</strong> AQILA AWALIA WARDANA – SDN Gobang 03</li>
-                </ul>
-            </div>
-
-            <!-- IPA -->
-            <div>
-                <h4 class="font-bold text-lg mb-3">
-                    Olimpiade IPA
-                </h4>
-
-                <ul class="space-y-2 text-gray-700">
-                    <li><strong>Juara 1:</strong> -</li>
-                    <li><strong>Juara 2:</strong> -</li>
-                    <li><strong>Juara 3:</strong> -</li>
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
+<h4 class="font-bold mb-2">Olimpiade IPA</h4>
+<ul>
+<li>🥇 -</li>
+<li>🥈 -</li>
+<li>🥉 -</li>
+</ul>
 
 </div>
-
-        </div>
-
-    </div>
-
 </div>
 
 </section>
+
 <!-- ================= INFORMASI ================= -->
-     <!-- ================= PENGUMUMAN ================= -->
-<div id="announcement" 
-class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 px-4 md:px-6 py-4 flex items-start justify-between gap-4">
-
-    <div class="flex items-start gap-3">
-        <div class="text-xl">📢</div>
-        <div>
-            <p class="font-bold">
-                Info Terbaru!
-            </p>
-            <p class="text-sm md:text-base">
-                BATAS AKHIR PENDAFTARAN, 7 APRIL 2026!!!.
-            </p>
-        </div>
-    </div>
-
-    <button onclick="document.getElementById('announcement').style.display='none'"
-            class="text-lg font-bold hover:opacity-60 transition">
-        ✕
-    </button>
-
-</div>
-
 <section id="informasi" class="hidden py-20 px-6 bg-white">
-
-<!-- ================= JUKNIS PELAKSANAAN ================= -->
-<div class="max-w-4xl mx-auto mb-16 fade-up">
-
-
-<div class="bg-gradient-to-r from-maroon to-[#5c0017] text-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-
-    <!-- TEXT -->
-    <div>
-        <h2 class="text-2xl md:text-3xl font-extrabold mb-2">
-            📘 Juknis Pelaksanaan
-        </h2>
-        <p class="opacity-90">
-            Unduh Petunjuk Teknis Pelaksanaan Pesta Gemilang Rumpin 2026 secara lengkap melalui Google Drive.
-        </p>
-    </div>
-
-    <!-- BUTTON -->
-    <a href="https://drive.google.com/drive/folders/1k7Zd5Ja4MmaI6TdgM3ESR5uvfKKYIL8d?usp=sharing"
-       target="_blank"
-       class="bg-gold hover:bg-yellow-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition flex items-center gap-3">
-
-        <!-- ICON DOWNLOAD -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/>
-        </svg>
-
-        Unduh Juknis Pelaksanaan
-
-    </a>
-
-</div>
-
-</div>
-
-
-<h2 class="text-3xl font-bold text-center mb-12">Timeline Kegiatan</h2>
-
-<div class="max-w-3xl mx-auto space-y-6 fade-up">
-
-
-<div class="p-6 border-l-4 border-maroon bg-gray-50 rounded-lg">
-<h3 class="font-bold flex items-center gap-3">
-
-    <!-- ICON KALENDER -->
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="h-6 w-6 text-maroon" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke="currentColor">
-
-        <path stroke-linecap="round" 
-              stroke-linejoin="round" 
-              stroke-width="2" 
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-    </svg>
-
-    Pendaftaran
-
-</h3>
-
-<p>14 Februari - 4 April 2026</p>
-</div>
-
-
-<div class="p-6 border-l-4 border-maroon bg-gray-50 rounded-lg">
-<h3 class="font-bold flex items-center gap-3">
-
-    <!-- ICON MEETING -->
-    <svg xmlns="http://www.w3.org/2000/svg"
-         class="h-6 w-6 text-maroon"
-         fill="none"
-         viewBox="0 0 24 24"
-         stroke="currentColor">
-
-        <path stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 20h5v-2a4 4 0 00-5-3.87M9 20H4v-2a4 4 0 015-3.87m8-2a4 4 0 10-8 0m8 0a4 4 0 11-8 0m8 0H9" />
-
-    </svg>
-
-    Technical Meeting
-
-</h3>
-
-<p>14 Februari 2026</p>
-</div>
-
-<div class="p-6 border-l-4 border-maroon bg-gray-50 rounded-lg">
-<h3 class="font-bold flex items-center gap-3">
-
-    <!-- ICON TARGET -->
-    <svg xmlns="http://www.w3.org/2000/svg"
-         class="h-6 w-6 text-maroon"
-         fill="none"
-         viewBox="0 0 24 24"
-         stroke="currentColor">
-
-        <path stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M11 17a4 4 0 100-8 4 4 0 000 8zm0 0v4m0-12V3m8 8h4M3 11H7m9.364 5.364l2.828 2.828M4.808 4.808l2.828 2.828m0 8.728l-2.828 2.828m12.728-12.728l-2.828 2.828" />
-
-    </svg>
-
-    Pelaksanaan
-
-</h3>
-<p>OSN - 23 Februari 2026</p>
-<p>O2SN,FLS3N, FTBI, Pentas PAI, ORTRAD - 14 - 16 April 2026</p>
-<p class="mt-3 text-sm font-bold text-gray-600 italic">
-*jadwal dapat berubah
-</p>
-</div>
-
-</div>
+<h2 class="text-3xl font-bold text-center mb-12">Timeline</h2>
+<p class="text-center">Pelaksanaan: 14 - 15 April 2026</p>
 </section>
 
 <!-- ================= PENDAFTARAN ================= -->
-<section id="pendaftaran" class="hidden py-20 px-6 bg-gray-50 text-center">
+<section id="pendaftaran" class="hidden py-20 px-6 text-center">
+<h2 class="text-3xl font-bold mb-6 text-maroon">Pendaftaran</h2>
 
-<h2 class="text-3xl font-bold mb-6 text-maroon">
-Pendaftaran
-</h2>
-
-<div class="max-w-2xl mx-auto bg-white p-10 rounded-2xl shadow-xl">
-
-    <div class="text-6xl mb-4">🚫</div>
-
-    <h3 class="text-2xl font-extrabold text-maroon mb-4">
-        Pendaftaran Telah Ditutup
-    </h3>
-
-    <p class="text-gray-600 mb-6">
-        Terima kasih atas partisipasi seluruh peserta dalam kegiatan 
-        <strong>Pesta Gemilang Rumpin 2026</strong>.
-    </p>
-
-    <p class="text-gray-500 text-sm">
-        Silakan pantau website ini untuk informasi hasil lomba dan dokumentasi kegiatan.
-    </p>
-
+<div class="bg-white p-10 rounded-xl shadow-xl max-w-xl mx-auto">
+<div class="text-6xl mb-4">🚫</div>
+<h3 class="text-xl font-bold text-maroon">Pendaftaran Telah Ditutup</h3>
+<p class="text-gray-600 mt-4">Terima kasih atas partisipasinya.</p>
 </div>
-
 </section>
 
+<!-- ================= DOKUMENTASI ================= -->
 <section id="dokumentasi" class="hidden py-20 px-6 bg-white">
-
-<h2 class="text-3xl font-bold text-center mb-16">Dokumentasi Lomba</h2>
-
-<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 fade-up">
-
-
-<!-- ================= OSN ================= -->
-<a href="https://drive.google.com/drive/folders/1O6QxTu1zQSxs_dVu0XfWuHqRZaRtBICI?usp=sharing"
-   target="_blank"
-   class="group relative overflow-hidden rounded-xl shadow-lg">
-
-    <img src="thumb-osn.jpg" class="w-full h-[300px] object-cover">
-
-    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex items-center justify-center">
-        <h3 class="text-white text-2xl font-bold">🔬 OSN</h3>
-    </div>
-
-</a>
-
-<!-- ================= O2SN ================= -->
-<a href="https://drive.google.com/drive/folders/1kbsQkvQQ55muVgP1yKPIszr8u9CZ7boH?usp=sharing"
-   target="_blank"
-   class="group relative overflow-hidden rounded-xl shadow-lg">
-
-   <img src="thumb-o2sn.jpg" class="w-full h-[300px] object-cover">
-
-    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex items-center justify-center">
-        <h3 class="text-white text-2xl font-bold">🏃 O2SN</h3>
-    </div>
-
-</a>
-
-<!-- ================= FLS3N ================= -->
-<a href="https://drive.google.com/drive/folders/1pMUkEgCxo88F4MqwlHDkqgLESw3ZxmHt?usp=sharing"
-   target="_blank"
-   class="group relative overflow-hidden rounded-xl shadow-lg">
-
-    <img src="thumb-fls3n.jpg" class="w-full h-[300px] object-cover">
-
-    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex items-center justify-center">
-        <h3 class="text-white text-2xl font-bold">🎨 FLS3N</h3>
-    </div>
-
-</a>
-
-<!-- ================= FTBI ================= -->
-<a href="https://drive.google.com/drive/folders/1iDTezk9d2mAb3h7WDw28fsvB2db7hSUq?usp=sharing"
-   target="_blank"
-   class="group relative overflow-hidden rounded-xl shadow-lg">
-
-    <img src="thumb-ftbi.jpg" class="w-full h-[300px] object-cover">
-
-    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex items-center justify-center">
-        <h3 class="text-white text-2xl font-bold">📖 FTBI</h3>
-    </div>
-
-</a>
-
-<!-- ================= Pentas PAI ================= -->
-<a href="https://drive.google.com/drive/folders/1DJqw6eAMOE56R_JK4p-TZNxuzW74EY4k?usp=sharing"
-   target="_blank"
-   class="group relative overflow-hidden rounded-xl shadow-lg">
-
-    <img src="thumb-pentas-pai.jpg" class="w-full h-[300px] object-cover">
-
-    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex items-center justify-center">
-        <h3 class="text-white text-2xl font-bold">🕌 Pentas PAI</h3>
-    </div>
-
-</a>
-
-<!-- ================= ORTRAD ================= -->
-<a href="https://drive.google.com/drive/folders/16QCrXx0P8OuG4qoJxOIb049-UQQLQnJ7?usp=sharing"
-   target="_blank"
-   class="group relative overflow-hidden rounded-xl shadow-lg">
-
-    <img src="thumb-ortrad.jpg" class="w-full h-[300px] object-cover">
-
-    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex items-center justify-center">
-        <h3 class="text-white text-2xl font-bold">🎯 ORTRAD</h3>
-    </div>
-
-</a>
-
-</div>
-
+<h2 class="text-3xl font-bold text-center mb-12">Dokumentasi</h2>
+<p class="text-center">Silakan akses Google Drive</p>
 </section>
 
-
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="bg-gray-900 text-white text-center py-10">
-<p>📞 +62 856-5915-8219</p>
-<p>✉️ pestagemilangrumpin@gmail.com</p>
-<p>📍 Kecamatan Rumpin, Kabupaten Bogor, Jawa Barat</p>
-<p class="text-gray-400 text-sm mt-6">© 2026 PT. Alenia Arunika Raya </p>
+<p>© 2026 Pesta Gemilang Rumpin</p>
 </footer>
 
 <script>
 function showPage(page){
-document.querySelectorAll("section").forEach(sec=>{
-sec.style.opacity="0";
-setTimeout(()=>sec.classList.add("hidden"),200);
+document.querySelectorAll("section").forEach(s=>{
+s.classList.add("hidden")
 });
-
-setTimeout(()=>{
-const active=document.getElementById(page);
-active.classList.remove("hidden");
-setTimeout(()=>active.style.opacity="1",50);
-},200);
+document.getElementById(page).classList.remove("hidden")
 }
 
-
-const deadline=new Date("April 4, 2026 23:59:59").getTime();
-setInterval(()=>{
-const now=new Date().getTime();
-const dist=deadline-now;
-const d=Math.floor(dist/(1000*60*60*24));
-const h=Math.floor((dist%(1000*60*60*24))/(1000*60*60));
-const m=Math.floor((dist%(1000*60*60))/(1000*60));
-document.getElementById("countdown").innerHTML=
-d+" Hari "+h+" Jam "+m+" Menit Lagi";
-},1000);
-/* ===== Scroll Animation ===== */
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-},{
-threshold:0.15
-});
-
-document.querySelectorAll(".fade-up").forEach(el=>{
-observer.observe(el);
-});
-
+showPage('beranda')
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
