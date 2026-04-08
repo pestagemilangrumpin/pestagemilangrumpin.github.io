@@ -151,13 +151,85 @@ Download
 <!-- ================= DOKUMENTASI ================= -->
 <section id="dokumentasi" class="hidden py-20 px-6 bg-white">
 
-<h2 class="text-3xl font-bold text-center mb-12">Dokumentasi Lomba</h2>
+<h2 class="text-3xl font-bold text-center mb-16">Dokumentasi Lomba</h2>
 
-<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+<div class="max-w-6xl mx-auto relative overflow-hidden">
 
-<a href="#" class="bg-gray-200 h-40 flex items-center justify-center rounded-xl">OSN</a>
-<a href="#" class="bg-gray-200 h-40 flex items-center justify-center rounded-xl">O2SN</a>
-<a href="#" class="bg-gray-200 h-40 flex items-center justify-center rounded-xl">FLS3N</a>
+    <!-- SLIDER -->
+    <div id="slider" class="flex transition-transform duration-700">
+
+        <!-- ITEM -->
+        <a href="https://drive.google.com/drive/folders/1O6QxTu1zQSxs_dVu0XfWuHqRZaRtBICI?usp=sharing"
+           target="_blank"
+           class="min-w-full px-2">
+            <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                <img src="thumb-osn.jpg" class="w-full h-[350px] object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <h3 class="text-white text-3xl font-bold">🔬 OSN</h3>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1kbsQkvQQ55muVgP1yKPIszr8u9CZ7boH?usp=sharing"
+           target="_blank"
+           class="min-w-full px-2">
+            <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                <img src="thumb-o2sn.jpg" class="w-full h-[350px] object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <h3 class="text-white text-3xl font-bold">🏃 O2SN</h3>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1pMUkEgCxo88F4MqwlHDkqgLESw3ZxmHt?usp=sharing"
+           target="_blank"
+           class="min-w-full px-2">
+            <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                <img src="thumb-fls3n.jpg" class="w-full h-[350px] object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <h3 class="text-white text-3xl font-bold">🎨 FLS3N</h3>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1iDTezk9d2mAb3h7WDw28fsvB2db7hSUq?usp=sharing"
+           target="_blank"
+           class="min-w-full px-2">
+            <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                <img src="thumb-ftbi.jpg" class="w-full h-[350px] object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <h3 class="text-white text-3xl font-bold">📖 FTBI</h3>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1DJqw6eAMOE56R_JK4p-TZNxuzW74EY4k?usp=sharing"
+           target="_blank"
+           class="min-w-full px-2">
+            <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                <img src="thumb-pentas-pai.jpg" class="w-full h-[350px] object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <h3 class="text-white text-3xl font-bold">🕌 Pentas PAI</h3>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/16QCrXx0P8OuG4qoJxOIb049-UQQLQnJ7?usp=sharing"
+           target="_blank"
+           class="min-w-full px-2">
+            <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                <img src="thumb-ortrad.jpg" class="w-full h-[350px] object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <h3 class="text-white text-3xl font-bold">🎯 ORTRAD</h3>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- BUTTON -->
+    <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded">‹</button>
+    <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded">›</button>
 
 </div>
 
@@ -176,6 +248,28 @@ s.classList.add("hidden")
 document.getElementById(page).classList.remove("hidden")
 }
 showPage('beranda')
+  <script>
+let index = 0;
+const slider = document.getElementById("slider");
+const total = slider.children.length;
+
+function showSlide(i){
+    index = (i + total) % total;
+    slider.style.transform = "translateX(-" + (index * 100) + "%)";
+}
+
+function nextSlide(){
+    showSlide(index + 1);
+}
+
+function prevSlide(){
+    showSlide(index - 1);
+}
+
+// AUTO SLIDE
+setInterval(() => {
+    nextSlide();
+}, 4000);
 </script>
 
 </body>
