@@ -1,95 +1,214 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pesta Gemilang Rumpin 2026</title>
+<title>PESTA GEMILANG RUMPIN 2026</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config = {
+theme:{
+extend:{
+colors:{
+maroon:'#800020',
+gold:'#b8860b'
+}
+}
+}
+}
+</script>
 
 <style>
 body{font-family:'Plus Jakarta Sans',sans-serif}
+.card{transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.15)}
+section{transition:.3s}
 </style>
 </head>
 
-<body class="bg-black text-white overflow-hidden">
+<body class="bg-gray-50 text-gray-800">
 
-<!-- FULLSCREEN SLIDER (FIXED FOR 1080x1350) -->
-<div class="w-screen h-screen flex items-center justify-center">
+<!-- NAVBAR -->
+<nav class="bg-maroon text-white px-6 py-3 flex justify-between items-center shadow-lg sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<img src="logo-bogor.webp" class="h-14 bg-white p-1 rounded">
+<img src="logo-sayaga.webp" class="h-14 bg-white p-1 rounded">
+<div>
+<h1 class="font-extrabold text-lg">PESTA GEMILANG RUMPIN 2026</h1>
+<p class="text-xs opacity-80">Kecamatan Rumpin – Kabupaten Bogor</p>
+</div>
+</div>
 
-<div class="relative w-full h-full max-w-[500px]">
+<div class="hidden md:flex gap-6">
+<button onclick="showPage('beranda')">Beranda</button>
+<button onclick="showPage('informasi')">Informasi</button>
+<button onclick="showPage('pendaftaran')">Pendaftaran</button>
+<button onclick="showPage('dokumentasi')">Dokumentasi</button>
+</div>
+</nav>
 
-<div id="slider" class="flex h-full transition-transform duration-700 ease-in-out">
+<!-- ================= BERANDA ================= -->
+<section id="beranda">
 
-<!-- FOTO (1080x1350 PORTRAIT) -->
-<img src="osn-mtk.jpg" class="min-w-full h-full object-contain">
-<img src="osn-ipa.jpg" class="min-w-full h-full object-contain">
-<img src="osn-ips.jpg" class="min-w-full h-full object-contain">
+<div class="bg-gradient-to-br from-maroon to-[#5c0017] text-white py-24 text-center">
+<h1 class="text-5xl font-extrabold mb-6">PESTA GEMILANG RUMPIN 2026</h1>
+<p>OSN • O2SN • FLS3N • FTBI • Pentas PAI • ORTRAD</p>
+<p class="text-gold text-2xl font-bold mt-4">14 - 15 April 2026</p>
+</div>
 
-<img src="fls3n-gambar.jpg" class="min-w-full h-full object-contain">
-<img src="fls3n-kriya.jpg" class="min-w-full h-full object-contain">
-<img src="fls3n-dongeng.jpg" class="min-w-full h-full object-contain">
-<img src="fls3n-cerita.jpg" class="min-w-full h-full object-contain">
-<img src="fls3n-nyanyi.jpg" class="min-w-full h-full object-contain">
-<img src="fls3n-pantomim.jpg" class="min-w-full h-full object-contain">
-<img src="fls3n-tari.jpg" class="min-w-full h-full object-contain">
+<div class="max-w-6xl mx-auto px-6 py-16">
+<h2 class="text-3xl font-bold text-center mb-10 text-maroon">📅 Jadwal & Lokasi</h2>
 
-<img src="o2sn-atletik-putra.jpg" class="min-w-full h-full object-contain">
-<img src="o2sn-atletik-putri.jpg" class="min-w-full h-full object-contain">
-<img src="o2sn-badminton-putra.jpg" class="min-w-full h-full object-contain">
-<img src="o2sn-badminton-putri.jpg" class="min-w-full h-full object-contain">
-<img src="o2sn-silat.jpg" class="min-w-full h-full object-contain">
-<img src="o2sn-karate.jpg" class="min-w-full h-full object-contain">
+<div class="grid md:grid-cols-2 gap-8 items-center">
+<img src="jadwal.jpg" class="rounded-xl shadow-lg">
 
-<img src="ftbi-ngadongeng.jpg" class="min-w-full h-full object-contain">
-<img src="ftbi-aksara.jpg" class="min-w-full h-full object-contain">
-<img src="ftbi-pupuh.jpg" class="min-w-full h-full object-contain">
-<img src="ftbi-sajak.jpg" class="min-w-full h-full object-contain">
-<img src="ftbi-biantara.jpg" class="min-w-full h-full object-contain">
-<img src="ftbi-carpon.jpg" class="min-w-full h-full object-contain">
-<img src="ftbi-borangan.jpg" class="min-w-full h-full object-contain">
+<div class="space-y-4">
+<p><strong>📅 Tanggal:</strong><br>14 - 15 April 2026</p>
+<p><strong>📍 Lokasi:</strong><br>Kecamatan Rumpin, Kabupaten Bogor</p>
+<p><strong>👥 Peserta:</strong><br>Seluruh Siswa SD Se-Kecamatan Rumpin</p>
+</div>
+</div>
+</div>
 
-<img src="ortrad-egrang-putra.jpg" class="min-w-full h-full object-contain">
-<img src="ortrad-egrang-putri.jpg" class="min-w-full h-full object-contain">
-<img src="ortrad-tarumpah.jpg" class="min-w-full h-full object-contain">
-<img src="ortrad-sumpitan.jpg" class="min-w-full h-full object-contain">
-<img src="ortrad-dagongan.jpg" class="min-w-full h-full object-contain">
-<img src="ortrad-hadang.jpg" class="min-w-full h-full object-contain">
+<div class="max-w-6xl mx-auto px-6 py-20">
+<h2 class="text-3xl font-bold text-center mb-12 text-maroon">📊 Update Juara</h2>
 
-<img src="pai-pidato.jpg" class="min-w-full h-full object-contain">
-<img src="pai-kaligrafi.jpg" class="min-w-full h-full object-contain">
-<img src="pai-lcc.jpg" class="min-w-full h-full object-contain">
-<img src="pai-mtq-putra.jpg" class="min-w-full h-full object-contain">
-<img src="pai-mtq-putri.jpg" class="min-w-full h-full object-contain">
-<img src="pai-adzan.jpg" class="min-w-full h-full object-contain">
-<img src="pai-sholat.jpg" class="min-w-full h-full object-contain">
-<img src="pai-mhq-putra.jpg" class="min-w-full h-full object-contain">
-<img src="pai-mhq-putri.jpg" class="min-w-full h-full object-contain">
+<div class="bg-white rounded-2xl shadow-lg p-8">
+
+<h3 class="text-2xl font-bold text-maroon mb-6">🔬 OSN</h3>
+
+<h4 class="font-bold mb-2">Olimpiade Matematika</h4>
+<ul class="mb-6">
+<li>🥇 Azzam Maulana – SDN Rumpin 03</li>
+<li>🥈 Fahtimatusidqia – SDN Kertajaya 03</li>
+<li>🥉 Aqila Awalia Wardana – SDN Gobang 03</li>
+</ul>
+
+<h4 class="font-bold mb-2">Olimpiade IPA</h4>
+<ul>
+<li>🥇 -</li>
+<li>🥈 -</li>
+<li>🥉 -</li>
+</ul>
+
+</div>
+</div>
+
+</section>
+
+<!-- ================= INFORMASI ================= -->
+<section id="informasi" class="hidden py-20 px-6 bg-white">
+
+<div class="max-w-4xl mx-auto mb-16">
+<div class="bg-gradient-to-r from-maroon to-[#5c0017] text-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row justify-between gap-6">
+<div>
+<h2 class="text-2xl font-extrabold mb-2">📘 Juknis</h2>
+<p>Unduh juknis lengkap melalui Google Drive</p>
+</div>
+
+<a href="https://drive.google.com/" target="_blank"
+class="bg-gold text-white px-6 py-3 rounded-xl font-bold">
+Download
+</a>
+</div>
+</div>
+
+<h2 class="text-3xl font-bold text-center mb-12">Timeline</h2>
+
+<div class="max-w-3xl mx-auto space-y-6">
+<div class="p-6 border-l-4 border-maroon bg-gray-50 rounded-lg">
+<h3 class="font-bold">Pendaftaran</h3>
+<p>14 Februari - 4 April 2026</p>
+</div>
+
+<div class="p-6 border-l-4 border-maroon bg-gray-50 rounded-lg">
+<h3 class="font-bold">Pelaksanaan</h3>
+<p>14 - 15 April 2026</p>
+</div>
+</div>
+
+</section>
+
+<!-- ================= PENDAFTARAN ================= -->
+<section id="pendaftaran" class="hidden py-20 px-6 text-center">
+<h2 class="text-3xl font-bold mb-6 text-maroon">Pendaftaran</h2>
+
+<div class="bg-white p-10 rounded-xl shadow-xl max-w-xl mx-auto">
+<div class="text-6xl mb-4">🚫</div>
+<h3 class="text-xl font-bold text-maroon">Pendaftaran Telah Ditutup</h3>
+<p class="text-gray-600 mt-4">Terima kasih atas partisipasinya.</p>
+</div>
+</section>
+
+<!-- ================= DOKUMENTASI ================= -->
+<section id="dokumentasi" class="hidden py-20 px-6 bg-white">
+
+<h2 class="text-3xl font-bold text-center mb-16">Dokumentasi Lomba</h2>
+
+<div class="max-w-6xl mx-auto relative overflow-hidden">
+
+<div id="slider" class="flex transition-transform duration-700 ease-in-out">
+
+<!-- ITEM -->
+<a href="#" class="min-w-full px-2">
+<img src="thumb-osn.jpg" class="w-full h-[350px] object-cover rounded-xl">
+</a>
+
+<a href="#" class="min-w-full px-2">
+<img src="thumb-o2sn.jpg" class="w-full h-[350px] object-cover rounded-xl">
+</a>
+
+<a href="#" class="min-w-full px-2">
+<img src="thumb-fls3n.jpg" class="w-full h-[350px] object-cover rounded-xl">
+</a>
 
 </div>
 
-<!-- NAV BUTTON -->
-<button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 px-3 py-2 rounded">‹</button>
-<button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 px-3 py-2 rounded">›</button>
+<button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded">‹</button>
+<button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded">›</button>
 
 </div>
-</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white text-center py-10">
+<p>© 2026 Pesta Gemilang Rumpin</p>
+</footer>
 
 <script>
+// NAVIGASI
+function showPage(page){
+document.querySelectorAll("section").forEach(s=>s.classList.add("hidden"));
+document.getElementById(page).classList.remove("hidden");
+}
+showPage('beranda');
+
+// SLIDER
 let index = 0;
 const slider = document.getElementById("slider");
 
 function showSlide(i){
-  const total = slider.children.length;
-  index = (i + total) % total;
-  slider.style.transform = `translateX(-${index * 100}%)`;
+if(!slider) return;
+const total = slider.children.length;
+index = (i + total) % total;
+slider.style.transform = "translateX(-" + (index * 100) + "%)";
 }
 
 function nextSlide(){ showSlide(index + 1); }
 function prevSlide(){ showSlide(index - 1); }
 
-setInterval(nextSlide, 2500);
+// AUTO + PAUSE
+let interval = setInterval(nextSlide, 4000);
+
+if(slider){
+slider.addEventListener("mouseover", ()=>clearInterval(interval));
+slider.addEventListener("mouseout", ()=>interval=setInterval(nextSlide,4000));
+}
 </script>
 
 </body>
