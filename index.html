@@ -1,110 +1,80 @@
 <!doctype html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PESTA GEMILANG RUMPIN 2026</title>
+<title>Pesta Gemilang Rumpin 2026</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<script>
-tailwind.config = {
-theme:{
-extend:{
-colors:{
-maroon:'#800020',
-gold:'#b8860b'
-}
-}
-}
-}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 
 <style>
 body{font-family:'Plus Jakarta Sans',sans-serif}
 </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-black text-white overflow-hidden">
 
-<!-- NAVBAR -->
-<nav class="bg-maroon text-white px-6 py-3 flex items-center gap-4 shadow-lg">
-<img src="logo-bogor.webp" class="h-12 bg-white p-1 rounded">
-<img src="logo-sayaga.webp" class="h-12 bg-white p-1 rounded">
-<div>
-<h1 class="font-extrabold text-lg">PESTA GEMILANG RUMPIN 2026</h1>
-<p class="text-xs opacity-80">Kecamatan Rumpin – Kabupaten Bogor</p>
-</div>
-</nav>
+<!-- FULLSCREEN SLIDER (FIXED FOR 1080x1350) -->
+<div class="w-screen h-screen flex items-center justify-center">
 
-<!-- HERO -->
-<section class="bg-gradient-to-br from-maroon to-[#5c0017] text-white py-24 text-center">
-<h1 class="text-5xl font-extrabold mb-6">PENGUMUMAN JUARA</h1>
-<p>OSN • FLS3N • O2SN • FTBI • ORTRAD • PENTAS PAI</p>
-</section>
+<div class="relative w-full h-full max-w-[500px]">
 
-<!-- SLIDER -->
-<section class="py-16">
-<div class="max-w-4xl mx-auto relative overflow-hidden">
+<div id="slider" class="flex h-full transition-transform duration-700 ease-in-out">
 
-<div id="slider" class="flex transition-transform duration-700 ease-in-out">
+<!-- FOTO (1080x1350 PORTRAIT) -->
+<img src="osn-mtk.jpg" class="min-w-full h-full object-contain">
+<img src="osn-ipa.jpg" class="min-w-full h-full object-contain">
+<img src="osn-ips.jpg" class="min-w-full h-full object-contain">
 
-<img src="osn-mtk.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="osn-ipa.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="osn-ips.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
+<img src="fls3n-gambar.jpg" class="min-w-full h-full object-contain">
+<img src="fls3n-kriya.jpg" class="min-w-full h-full object-contain">
+<img src="fls3n-dongeng.jpg" class="min-w-full h-full object-contain">
+<img src="fls3n-cerita.jpg" class="min-w-full h-full object-contain">
+<img src="fls3n-nyanyi.jpg" class="min-w-full h-full object-contain">
+<img src="fls3n-pantomim.jpg" class="min-w-full h-full object-contain">
+<img src="fls3n-tari.jpg" class="min-w-full h-full object-contain">
 
-<img src="fls3n-gambar.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="fls3n-kriya.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="fls3n-dongeng.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="fls3n-cerita.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="fls3n-nyanyi.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="fls3n-pantomim.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="fls3n-tari.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
+<img src="o2sn-atletik-putra.jpg" class="min-w-full h-full object-contain">
+<img src="o2sn-atletik-putri.jpg" class="min-w-full h-full object-contain">
+<img src="o2sn-badminton-putra.jpg" class="min-w-full h-full object-contain">
+<img src="o2sn-badminton-putri.jpg" class="min-w-full h-full object-contain">
+<img src="o2sn-silat.jpg" class="min-w-full h-full object-contain">
+<img src="o2sn-karate.jpg" class="min-w-full h-full object-contain">
 
-<img src="o2sn-atletik-putra.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="o2sn-atletik-putri.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="o2sn-badminton-putra.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="o2sn-badminton-putri.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="o2sn-silat.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="o2sn-karate.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
+<img src="ftbi-ngadongeng.jpg" class="min-w-full h-full object-contain">
+<img src="ftbi-aksara.jpg" class="min-w-full h-full object-contain">
+<img src="ftbi-pupuh.jpg" class="min-w-full h-full object-contain">
+<img src="ftbi-sajak.jpg" class="min-w-full h-full object-contain">
+<img src="ftbi-biantara.jpg" class="min-w-full h-full object-contain">
+<img src="ftbi-carpon.jpg" class="min-w-full h-full object-contain">
+<img src="ftbi-borangan.jpg" class="min-w-full h-full object-contain">
 
-<img src="ftbi-ngadongeng.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ftbi-aksara.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ftbi-pupuh.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ftbi-sajak.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ftbi-biantara.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ftbi-carpon.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ftbi-borangan.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
+<img src="ortrad-egrang-putra.jpg" class="min-w-full h-full object-contain">
+<img src="ortrad-egrang-putri.jpg" class="min-w-full h-full object-contain">
+<img src="ortrad-tarumpah.jpg" class="min-w-full h-full object-contain">
+<img src="ortrad-sumpitan.jpg" class="min-w-full h-full object-contain">
+<img src="ortrad-dagongan.jpg" class="min-w-full h-full object-contain">
+<img src="ortrad-hadang.jpg" class="min-w-full h-full object-contain">
 
-<img src="ortrad-egrang-putra.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ortrad-egrang-putri.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ortrad-tarumpah.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ortrad-sumpitan.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ortrad-dagongan.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="ortrad-hadang.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-
-<img src="pai-pidato.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="pai-kaligrafi.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="pai-lcc.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="pai-mtq-putra.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="pai-mtq-putri.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="pai-adzan.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="pai-sholat.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="pai-mhq-putra.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
-<img src="pai-mhq-putri.jpg" class="min-w-full h-[600px] object-contain bg-black rounded-xl">
+<img src="pai-pidato.jpg" class="min-w-full h-full object-contain">
+<img src="pai-kaligrafi.jpg" class="min-w-full h-full object-contain">
+<img src="pai-lcc.jpg" class="min-w-full h-full object-contain">
+<img src="pai-mtq-putra.jpg" class="min-w-full h-full object-contain">
+<img src="pai-mtq-putri.jpg" class="min-w-full h-full object-contain">
+<img src="pai-adzan.jpg" class="min-w-full h-full object-contain">
+<img src="pai-sholat.jpg" class="min-w-full h-full object-contain">
+<img src="pai-mhq-putra.jpg" class="min-w-full h-full object-contain">
+<img src="pai-mhq-putri.jpg" class="min-w-full h-full object-contain">
 
 </div>
 
-<button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded">‹</button>
-<button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded">›</button>
+<!-- NAV BUTTON -->
+<button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 px-3 py-2 rounded">‹</button>
+<button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 px-3 py-2 rounded">›</button>
 
 </div>
-</section>
-
-<footer class="bg-gray-900 text-white text-center py-6">
-<p>© 2026 Pesta Gemilang Rumpin</p>
-</footer>
+</div>
 
 <script>
 let index = 0;
@@ -119,7 +89,7 @@ function showSlide(i){
 function nextSlide(){ showSlide(index + 1); }
 function prevSlide(){ showSlide(index - 1); }
 
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 2500);
 </script>
 
 </body>
